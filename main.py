@@ -56,7 +56,6 @@ def save():
             website_input.delete(0, 'end')  # clear inputs from field
             password_input.delete(0, 'end')
 
-
 # ---------------------------- UI SETUP ------------------------------- #
 window = Tk()
 window.title("Password Manager")
@@ -70,8 +69,8 @@ canvas.grid(row=0, column=1)
 
 website_label = Label(text="Website:")
 website_label.grid(row=1, column=0)
-website_input = Entry(width=35)
-website_input.grid(column=1, row=1, columnspan=2)
+website_input = Entry(width=21)
+website_input.grid(column=1, row=1)
 website_input.focus()
 
 email_label = Label(text="Email/Username:")
@@ -87,6 +86,9 @@ password_input.grid(column=1, row=3)
 
 generate_button = Button(text='Generate Password', command=generate_password)
 generate_button.grid(row=3, column=2)
+
+search_button = Button(text='Search', width=13)
+search_button.grid(row=1, column=2)
 
 add_button = Button(text='Add', width=36, command=save)
 add_button.grid(row=4, column=1, columnspan=2)
